@@ -136,7 +136,7 @@ class _WhatsAppStoryViewExampleState extends State<WhatsAppStoryViewExample> {
           Icons.volume_down_sharp,
           color: Colors.white,
         ),
-        bottomButton: SafeArea(
+        bottomButton: (index) => SafeArea(
           bottom: true,
           minimum: const EdgeInsets.only(bottom: 20, right: 16, left: 16),
           child: Container(

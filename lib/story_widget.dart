@@ -24,6 +24,7 @@ import 'package:story_widget/widgets/story_indicator.dart';
 
 /// [OnPageChanged] is called when a story item changes
 typedef OnPageChanged = Function(int value);
+typedef ButtonBuilder = Widget Function(int value);
 
 class StoryWidget extends StatefulWidget {
   /// This Calls when story is completed
@@ -40,7 +41,7 @@ class StoryWidget extends StatefulWidget {
 
   final Widget unmuteIcon;
 
-  final Widget? bottomButton;
+  final ButtonBuilder? bottomButton;
 
   // Optional caption for the story
   final String? caption;
@@ -322,14 +323,13 @@ class _StoryWidgetState extends State<StoryWidget> with TickerProviderStateMixin
                         ? 1
                         : 0,
                 child: StoryIndicator(
-                  storyItemsLen: widget.storyItems.length,
-                  currentItemIndex: currentItemIndex,
-                  // Add this
                   progress: _progress,
+                  currentItemIndex: currentItemIndex,
                   indicatorColor: widget.indicatorColor,
+                  storyItemsLen: widget.storyItems.length,
                   indicatorHeight: widget.indicatorHeight,
-                  indicatorValueColor: widget.indicatorValueColor,
                   indicatorPadding: widget.indicatorPadding,
+                  indicatorValueColor: widget.indicatorValueColor,
                 ),
               ),
             ),
@@ -445,7 +445,7 @@ class _StoryWidgetState extends State<StoryWidget> with TickerProviderStateMixin
         if (widget.bottomButton != null)
           Align(
             alignment: Alignment.bottomCenter,
-            child: widget.bottomButton,
+            child: widget.bottomButton!.call(currentItemIndex),
           ),
         Align(
           alignment: Alignment.topCenter,
