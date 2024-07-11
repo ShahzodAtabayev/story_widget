@@ -473,7 +473,7 @@ class _StoryWidgetState extends State<StoryWidget> with TickerProviderStateMixin
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              widget.storyGroup.title ?? '',
+                              widget.storyItems[currentItemIndex].title ?? '',
                               style: const TextStyle(
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white,
@@ -481,7 +481,7 @@ class _StoryWidgetState extends State<StoryWidget> with TickerProviderStateMixin
                               ),
                             ),
                             Text(
-                              widget.storyGroup.subtitle ?? '',
+                              widget.storyItems[currentItemIndex].subtitle ?? '',
                               style: const TextStyle(
                                 fontWeight: FontWeight.w500,
                                 color: Colors.white54,

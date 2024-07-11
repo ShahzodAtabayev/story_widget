@@ -75,6 +75,8 @@ class _WhatsAppStoryViewExampleState extends State<WhatsAppStoryViewExample> {
             type: StoryItemType.image,
             viewers: [],
             duration: 3,
+            title: "Премьеры от SalomTV ✨1",
+            subtitle: "Serjan Bratan",
           ),
           StoryItem(
             url:
@@ -82,18 +84,24 @@ class _WhatsAppStoryViewExampleState extends State<WhatsAppStoryViewExample> {
             type: StoryItemType.image,
             viewers: [],
             duration: 5,
+            title: "Премьеры от SalomTV ✨2",
+            subtitle: "Serjan Bratan",
           ),
           StoryItem(
             viewers: [],
             duration: 27,
             type: StoryItemType.video,
             url: "https://minio.salomtv.uz/stories/99d2b367-948f-4cde-aef8-bba8f1fee650/master.m3u8",
+            title: "Премьеры от SalomTV ✨3",
+            subtitle: "Serjan Bratan",
           ),
           StoryItem(
             viewers: [],
             duration: 27,
             type: StoryItemType.video,
             url: "https://minio.salomtv.uz/stories/99d2b367-948f-4cde-aef8-bba8f1fee650/master.m3u8",
+            title: "Премьеры от SalomTV ✨4",
+            subtitle: "Serjan Bratan",
           ),
         ],
         onComplete: () {
