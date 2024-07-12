@@ -25,12 +25,14 @@ class _StoryVideoState extends State<StoryVideo> {
     return Container(
       child: Stack(
         children: [
-          if (widget.controller != null &&
-              widget.controller!.value.isInitialized)
+          if (widget.controller != null && widget.controller!.value.isInitialized)
             Center(
-              child: AspectRatio(
-                aspectRatio: widget.controller!.value.aspectRatio,
-                child: VideoPlayer(widget.controller!),
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 28),
+                child: AspectRatio(
+                  aspectRatio: widget.controller!.value.aspectRatio,
+                  child: VideoPlayer(widget.controller!),
+                ),
               ),
             ),
         ],
