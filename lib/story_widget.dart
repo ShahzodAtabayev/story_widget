@@ -457,14 +457,24 @@ class _StoryWidgetState extends State<StoryWidget> with TickerProviderStateMixin
                     ? 1
                     : 0,
             child: Container(
-              height: 36,
-              margin: EdgeInsets.only(
-                left: 16,
-                right: 4,
-                top: MediaQuery.of(context).padding.top + 10,
+              height: MediaQuery.of(context).padding.top + 50,
+              // margin: EdgeInsets.only(
+              //
+              // ),
+              padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 10, left: 16, right: 4),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
+                  Colors.black,
+                  Colors.black87,
+                  Colors.black38,
+                  Colors.black38,
+                  Colors.black38,
+                  Colors.black26,
+                  Colors.black.withOpacity(0),
+                ]),
               ),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
                     child: Row(

@@ -27,12 +27,9 @@ class _StoryVideoState extends State<StoryVideo> {
         children: [
           if (widget.controller != null && widget.controller!.value.isInitialized)
             Center(
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 28),
-                child: AspectRatio(
-                  aspectRatio: widget.controller!.value.aspectRatio,
-                  child: VideoPlayer(widget.controller!),
-                ),
+              child: AspectRatio(
+                aspectRatio: widget.controller!.value.aspectRatio,
+                child: VideoPlayer(widget.controller!),
               ),
             ),
         ],
